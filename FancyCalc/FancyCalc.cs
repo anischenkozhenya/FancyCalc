@@ -64,6 +64,10 @@ namespace FancyCalc
 
         public double Culculate(string expression)
         {
+            if (expression==null)
+            {
+                throw new ArgumentNullException();
+            }
             char[] exp = expression.ToCharArray();
             double result = 0;
             char simbol = ' ';
